@@ -1,0 +1,32 @@
+.color-menu {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	border: 1px solid gray;
+	max-width: 500px;
+	max-height: 100px;
+	padding: 2rem;
+	bottom: 1rem;
+	left: 50%;
+	transform: translate(-50%, 0);
+	border-radius: 30px;
+}
+
+.random {
+}
+
+.random-button {
+	padding: 1.5rem;
+	border: none;
+	background-color: white;
+	border-radius: 8px;
+}
+
+.random-button:hover {
+	background-color: #f6f6f6;
+}
+
+.random-image {
+	width: 4.8rem;
+	height: auto;
+}
