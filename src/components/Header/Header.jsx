@@ -1,12 +1,12 @@
-import ColorMenu from "../ColorMenu/ColorMenu";
+/* eslint-disable react/prop-types */
 import "./Header.css";
 
-export default function Header() {
+export default function Header({ colors }) {
 	return (
-		<>
-			<div>hellop htere</div>
-
-			<ColorMenu />
-		</>
+		<div className="header" style={{ backgroundColor: colors.background }}>
+			<h1 className="header__title" style={{ color: colors.primary }}>
+				Lorem ipsum dolor sit amet.
+			</h1>
+		</div>
 	);
 }

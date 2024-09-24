@@ -1,0 +1,11 @@
+.header {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.header__title {
+	font-size: clamp(3rem, 3rem + 2vw, 8rem);
+}

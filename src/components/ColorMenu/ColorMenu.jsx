@@ -1,14 +1,16 @@
+/* eslint-disable react/prop-types */
+import ComplementaryButton from "../Buttons/ComplementaryButton";
 import "./ColorMenu.css";
-import random from "./random.svg";
 
-export default function ColorMenu() {
+export default function ColorMenu({ setColors }) {
 	return (
 		<div className="color-menu">
-			<div className="random">
+			<ComplementaryButton setColors={setColors} />
+			{/* 			<div className="random">
 				<button className="random-button">
 					<img src={random} alt="Random Button" className="random-image" />
 				</button>
-			</div>
+			</div> */}
 		</div>
 	);
 }
