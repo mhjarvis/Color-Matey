@@ -14,7 +14,7 @@ function App() {
 
 	return (
 		<>
-			<ColorMenu setColors={setColors} />
+			<ColorMenu setColors={setColors} colors={colors} />
 			<Header colors={colors} />
 		</>
 	);

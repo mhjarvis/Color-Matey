@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import "./ComplementaryButton.css";
 
 export default function ComplementaryButton({ setColors }) {
 	function randomRgb() {
@@ -32,9 +33,13 @@ export default function ComplementaryButton({ setColors }) {
 			primary: rgbToString(complementaryColor),
 		});
 	}
+
 	return (
-		<div>
-			<button onClick={generateComplementaryColors}>dumb</button>
-		</div>
+		<button
+			className="complementary__button"
+			onClick={generateComplementaryColors}
+		>
+			Complementary Button
+		</button>
 	);
 }

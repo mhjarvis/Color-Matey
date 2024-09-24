@@ -1,16 +1,11 @@
 /* eslint-disable react/prop-types */
-import ComplementaryButton from "../Buttons/ComplementaryButton";
+import ComplementaryButton from "../Buttons/ComplementaryButton/ComplementaryButton";
 import "./ColorMenu.css";
 
-export default function ColorMenu({ setColors }) {
+export default function ColorMenu({ setColors, colors }) {
 	return (
 		<div className="color-menu">
-			<ComplementaryButton setColors={setColors} />
-			{/* 			<div className="random">
-				<button className="random-button">
-					<img src={random} alt="Random Button" className="random-image" />
-				</button>
-			</div> */}
+			<ComplementaryButton setColors={setColors} colors={colors} />
 		</div>
 	);
 }
