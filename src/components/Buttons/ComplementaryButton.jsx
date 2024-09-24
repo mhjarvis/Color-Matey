@@ -1,28 +1,32 @@
 /* eslint-disable react/prop-types */
+
 export default function ComplementaryButton({ setColors }) {
 	function randomRgb() {
-		const r = Math.floor(Math.random() * 256);
-		const g = Math.floor(Math.random() * 256);
-		const b = Math.floor(Math.random() * 256);
+		const h = Math.floor(Math.random() * 360);
+		const s = Math.floor(Math.random() * (101 - 50)) + 50;
+		const l = Math.floor(Math.random() * (101 - 50)) + 50;
 
-		return { r, g, b };
+		return { h, s, l };
 	}
 
-	function getComplementaryColor({ r, g, b }) {
+	function getComplementaryColor({ h, s, l }) {
 		return {
-			r: 255 - r,
-			g: 255 - g,
-			b: 255 - b,
+			h: (h + 180) % 360,
+			s: s - 50,
+			l: l - 50,
 		};
 	}
 
-	function rgbToString({ r, g, b }) {
-		return `rgb(${r}, ${g}, ${b})`;
+	function rgbToString({ h, s, l }) {
+		return `hsl(${h}, ${s}%, ${l}%)`;
 	}
 
 	function generateComplementaryColors() {
 		const randomColor = randomRgb();
 		const complementaryColor = getComplementaryColor(randomColor);
+
+		console.log(randomColor, complementaryColor);
+
 		setColors({
 			background: rgbToString(randomColor),
 			primary: rgbToString(complementaryColor),
