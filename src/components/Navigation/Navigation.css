@@ -1,0 +1,29 @@
+.navigation {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	padding: 1rem 2rem;
+}
+
+.logo {
+	font-size: 2rem;
+}
+
+.navigation__container {
+}
+
+.navigation__ul {
+	display: flex;
+	gap: 2rem;
+}
+
+.navigation__li {
+	font-size: 2rem;
+}
+
+.navigation__li:hover {
+}
