@@ -6,6 +6,7 @@ import "./Navigation.css";
 export default function Navigation({ colors }) {
 	const [width, setWidth] = useState(window.innerWidth);
 
+	// update width as needed
 	useEffect(() => {
 		const handleResize = () => setWidth(window.innerWidth);
 		window.addEventListener("resize", handleResize);
@@ -30,7 +31,7 @@ export default function Navigation({ colors }) {
 			) : (
 				""
 			)}
-			{width < 768 ? <Hamburger /> : ""}
+			{width < 768 ? <Hamburger colors={colors} /> : ""}
 		</div>
 	);
 }
