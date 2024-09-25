@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header/Header";
 import ColorMenu from "./components/ColorMenu/ColorMenu";
-import FAQ from "./components/FAQ/FAQ";
+import FAQ from "./components/FAQ/Faq";
 
 function App() {
 	const [colors, setColors] = useState({
