@@ -5,8 +5,8 @@ import ColorMenu from "./components/ColorMenu/ColorMenu";
 function App() {
 	const [colors, setColors] = useState({
 		primary: "black",
-		secondary: "",
-		tertiary: "green",
+		secondary: "white",
+		tertiary: "white",
 		background: "white",
 	});
 

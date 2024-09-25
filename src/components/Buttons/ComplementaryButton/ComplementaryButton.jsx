@@ -3,19 +3,28 @@
 import "./ComplementaryButton.css";
 
 export default function ComplementaryButton({ setColors, colors }) {
-	function randomRgb() {
+	// Primary Color
+	function getPrimaryColor() {
 		const h = Math.floor(Math.random() * 360);
-		const s = Math.floor(Math.random() * (101 - 50)) + 50;
-		const l = Math.floor(Math.random() * (101 - 50)) + 50;
-
+		const s = Math.floor(Math.random() * (101 - 30)) + 30;
+		const l = Math.floor(Math.random() * 60);
 		return { h, s, l };
+	}
+
+	// Secondary Color - Complementary (180deg)
+	function getSecondaryColor({ h, s, l }) {
+		return {
+			h: (h + 180) % 360,
+			s: s,
+			l: l,
+		};
 	}
 
 	function getBackgroundColor({ h, s, l }) {
 		return {
 			h: h,
-			s: s,
-			l: Math.floor(Math.random() * (101 - 80)) + 80,
+			s: Math.floor(Math.random() * 31),
+			l: Math.floor(Math.random() * (101 - 90)) + 90,
 		};
 	}
 
@@ -27,14 +36,6 @@ export default function ComplementaryButton({ setColors, colors }) {
 		};
 	}
 
-	function getSecondaryColor({ h, s, l }) {
-		return {
-			h: (h + 170) % 360,
-			s: s,
-			l: l,
-		};
-	}
-
 	function getTertiaryColor({ h, s, l }) {
 		return {
 			h: (h + 190) % 360,
@@ -43,23 +44,39 @@ export default function ComplementaryButton({ setColors, colors }) {
 		};
 	}
 
-	function rgbToString({ h, s, l }) {
+	function hslToString({ h, s, l }) {
 		return `hsl(${h}, ${s}%, ${l}%)`;
 	}
 
 	function generateComplementaryColors() {
-		const randomColor = randomRgb();
-		const backgroundColor = getBackgroundColor(randomColor);
-		const complementaryColor = getComplementaryColor(randomColor);
-		const secondaryColor = getSecondaryColor(randomColor);
-		const tertiaryColor = getTertiaryColor(randomColor);
+		const primaryColor = getPrimaryColor();
+		const secondaryColor = getSecondaryColor(primaryColor);
+		const backgroundColor = getBackgroundColor(primaryColor);
+		const complementaryColor = getComplementaryColor(primaryColor);
+		const tertiaryColor = getTertiaryColor(primaryColor);
+
+		setColors({
+			/* 			background: rgbToString(backgroundColor),
+			 */
+			primary: hslToString(primaryColor),
+			secondary: hslToString(secondaryColor),
+			/* 			secondary: rgbToString(secondaryColor),
+			tertiary: rgbToString(tertiaryColor), */
+		});
+		/* 
+	function generateComplementaryColors() {
+		const primaryColor = getPrimaryColor();
+		const backgroundColor = getBackgroundColor(primaryColor);
+		const complementaryColor = getComplementaryColor(primaryColor);
+		const secondaryColor = getSecondaryColor(primaryColor);
+		const tertiaryColor = getTertiaryColor(primaryColor);
 
 		setColors({
 			background: rgbToString(backgroundColor),
 			primary: rgbToString(complementaryColor),
 			secondary: rgbToString(secondaryColor),
 			tertiary: rgbToString(tertiaryColor),
-		});
+		}); */
 
 		console.log(colors);
 	}
