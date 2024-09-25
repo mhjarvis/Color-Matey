@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-
 import { useState } from "react";
 import Header from "./components/Header/Header";
 import ColorMenu from "./components/ColorMenu/ColorMenu";
@@ -7,7 +5,7 @@ import ColorMenu from "./components/ColorMenu/ColorMenu";
 function App() {
 	const [colors, setColors] = useState({
 		primary: "black",
-		secondary: "blue",
+		secondary: "",
 		tertiary: "green",
 		background: "white",
 	});

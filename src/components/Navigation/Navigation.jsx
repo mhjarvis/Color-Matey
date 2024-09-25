@@ -15,7 +15,7 @@ export default function Navigation({ colors }) {
 
 	return (
 		<div className="navigation">
-			<div className="logo" style={{ color: colors.primary }}>
+			<div className="logo" style={{ color: colors.tertiary }}>
 				ColorMatey
 			</div>
 			{width >= 768 ? (
