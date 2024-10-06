@@ -18,9 +18,6 @@
 	font-weight: 900;
 }
 
-.navigation__container {
-}
-
 .navigation__ul {
 	display: flex;
 	gap: 2rem;
