@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import ColorMenu from "./components/ColorMenu/ColorMenu";
 import FAQ from "./components/FAQ/Faq";
 import ComplementaryButton from "./components/Buttons/ComplementaryButton/ComplementaryButton";
+import AnalogousButton from "./components/Buttons/AnalogousButton/AnalogousButton";
 
 function App() {
 	const [colors, setColors] = useState({
@@ -16,6 +17,7 @@ function App() {
 		<>
 			<ColorMenu>
 				<ComplementaryButton setColors={setColors} colors={colors} />
+				<AnalogousButton setColors={setColors} colors={colors} />
 			</ColorMenu>
 			<Header colors={colors} />
 			<FAQ />
