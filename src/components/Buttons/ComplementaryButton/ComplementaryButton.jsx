@@ -63,20 +63,6 @@ export default function ComplementaryButton({ setColors, colors }) {
 			/* 			secondary: rgbToString(secondaryColor),
 			tertiary: rgbToString(tertiaryColor), */
 		});
-		/* 
-	function generateComplementaryColors() {
-		const primaryColor = getPrimaryColor();
-		const backgroundColor = getBackgroundColor(primaryColor);
-		const complementaryColor = getComplementaryColor(primaryColor);
-		const secondaryColor = getSecondaryColor(primaryColor);
-		const tertiaryColor = getTertiaryColor(primaryColor);
-
-		setColors({
-			background: rgbToString(backgroundColor),
-			primary: rgbToString(complementaryColor),
-			secondary: rgbToString(secondaryColor),
-			tertiary: rgbToString(tertiaryColor),
-		}); */
 
 		console.log(colors);
 	}

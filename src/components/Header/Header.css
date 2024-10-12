@@ -10,7 +10,4 @@
 	font-size: clamp(3rem, 3rem + 2vw, 12rem);
 	text-transform: uppercase;
 	font-weight: 300;
-
-	color: hsl(213, 69%, 90%);
-	color: hsl(212, 68%, 43%);
 }
