@@ -9,5 +9,5 @@
 .header__title {
 	font-size: clamp(3rem, 3rem + 2vw, 12rem);
 	text-transform: uppercase;
-	font-weight: 300;
+	font-weight: 500;
 }
